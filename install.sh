@@ -23,6 +23,6 @@ else
    cp $PiPoEDir/pipoe.service /etc/systemd/system
 
    systemctl enable /etc/systemd/system/pipoe.service
-   whiptail --title "Installation complete" --msgbox "Pi PoE installation complete. Remember that the shutdown -h or power off commands will now remove power on the Pi." 8 78
+   whiptail --title "Installation complete" --msgbox "Pi PoE installation complete.\n\nRemember that the shutdown -h or poweroff commands will now remove power on the Pi.\n\nYou can now reboot the system to enable the service" 12 78
 fi
 
