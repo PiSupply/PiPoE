@@ -1,7 +1,8 @@
 # PiPoE
-Resources for Pi PoE range.
+Resources for the [Pi PoE range](http://pipoe.net) of boards from [Pi Supply](https://www.pi-supply.com).
 
-With [PiPoE](https://www.pi-supply.com/product/pi-poe-switch-hat-power-over-ethernet-for-raspberry-pi/) you can power your Raspberry Pi and provide an Ethernet connection in any location with just a single cable.
+With [Pi PoE](https://www.pi-supply.com/product/pi-poe-switch-hat-power-over-ethernet-for-raspberry-pi/) you can power your Raspberry Pi and provide an Ethernet connection in any location with just a single cable.
+
 Additional information on how to assemble the board can be found on the guide [Pi PoE Switch HAT Quickstart and FAQ](https://www.pi-supply.com/make/pi-poe-switch-hat-quickstart-faq/). 
 
 The script provided instructs the Pi PoE to completely remove power to the Raspberry Pi if a shutdown is invoked.
@@ -15,6 +16,7 @@ curl -sSL https://pisupp.ly/pipoecode | sudo bash
 
 ## Optional resistors and LEDs on the 
 The resistors should be soldered on the reverse of the board where the silk screen read R12 and R13. Once the resistors are in place GPIO 22,23 and 24 will be connected to the LEDs of the on-board PoE connector. GPIO 23 is connected to the single green LED and GPIO 22 and 24 are connected to the green/amber dual LED.
+
 To drive the LEDs you will have to set the GPIOs as outputs. The LED on the left is a single green LED whereas the one on the right is a dual green/amber LED. To drive the green LED on the left it is sufficient to pull the corresponding GPIO 23 high, to turn it bring the GPIO low. For the dual LED instead you will have to bring GPIO 22 high whilst having GPIO 24 low to turn on the green LED, with GPIO 22 low and GPIO 24 high you will turn on the amber LED.
 You can test the LEDS with the code below:
 
