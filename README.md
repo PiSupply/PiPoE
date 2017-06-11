@@ -1,11 +1,9 @@
 # PiPoE
 Resources for the [Pi PoE range](http://pipoe.net) of boards from [Pi Supply](https://www.pi-supply.com).
 
-With [Pi PoE](https://www.pi-supply.com/product/pi-poe-switch-hat-power-over-ethernet-for-raspberry-pi/) you can power your Raspberry Pi and provide an Ethernet connection in any location with just a single cable.
+With [Pi PoE](https://www.pi-supply.com/product/pi-poe-switch-hat-power-over-ethernet-for-raspberry-pi/) you can power your Raspberry Pi and provide an Ethernet connection in any location with just a single cable. Additional information on how to assemble the board can be found on the [Maker Zone](https://www.pi-supply.com/make) guide - [Pi PoE Switch HAT Quickstart and FAQ](https://www.pi-supply.com/make/pi-poe-switch-hat-quickstart-faq/). 
 
-Additional information on how to assemble the board can be found on the guide [Pi PoE Switch HAT Quickstart and FAQ](https://www.pi-supply.com/make/pi-poe-switch-hat-quickstart-faq/). 
-
-The script provided instructs the Pi PoE to completely remove power to the Raspberry Pi if a shutdown is invoked.
+The script provided here instructs the Pi PoE to completely remove power to the Raspberry Pi if a shutdown is invoked.
 
 ## Installation
 1. Login via SSH or via the console.
