@@ -9,7 +9,7 @@ fi
 if [ ! $? = 0 ]; then
    exit 1
 else
-   sudo apt-get install git whiptail wiringpi #Installs packages which might be missing
+   sudo apt-get install -y git whiptail wiringpi #Installs packages which might be missing
 
    PiPoEDir="PiPoE"
    if [ -d "$PiPoEDir" ]; then
