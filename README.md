@@ -1,3 +1,4 @@
+![Alt text](https://user-images.githubusercontent.com/16068311/30545146-b3dff91c-9c80-11e7-8282-dc3888f70f32.png?raw=true "Optional Title")
 # PiPoE
 Resources for the [Pi PoE range](http://pipoe.net) of boards from [Pi Supply](https://www.pi-supply.com).
 
