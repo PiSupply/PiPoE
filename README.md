@@ -61,8 +61,9 @@ The pinout for the Pi PoE can be found at the [Raspberry Pi pinout website](http
 
 ## Gigabit Ethernet
 
-The Raspberry Pi 3 B+ now supports gigabit ethernet but unfortunately the PoE HAT does not. If you are using the PoE HAT with a gigabit Ethernet you will receive power but not data. The way to resolve this issue is to tell the Raspberry Pi to only let the switch know that it is 10/100 only. To do this we need to add the following line to `/etc/rc.local`:
+The Raspberry Pi 3 B+ now supports gigabit ethernet but unfortunately the PoE HAT does not. If you are using the PoE HAT with a gigabit Ethernet you will receive power but not data. One way to resolve this issue is to tell the Raspberry Pi to only let the switch know that it is 10/100 only. To do this we need to add the following line to `/etc/rc.local`:
 
 ```bash
 /sbin/ethtool -s eth0 autoneg on speed 100 duplex full
 ```
+If you can't modify that Rapsberry pi config, you can also configure the switch to only negotiate for a 100M link
