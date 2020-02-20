@@ -11,6 +11,15 @@ if [ ! $? = 0 ]; then
 else
    sudo apt-get install -y git whiptail wiringpi #Installs packages which might be missing
 
+   if grep "4" /proc/device-tree/model; then
+   cd /tmp
+   wget https://project-downloads.drogon.net/wiringpi-latest.deb
+   sudo dpkg -i wiringpi-latest.deb
+   sudo rm wiringpi-latest.deb
+   cd ~
+fi
+
+
    PiPoEDir="PiPoE"
    if [ -d "$PiPoEDir" ]; then
         whiptail --title "Installation aborted" --msgbox "$PiPoEDir already exists, please remove it and restart the installation" 8 78
@@ -25,4 +34,3 @@ else
    systemctl enable /etc/systemd/system/pipoe.service
    whiptail --title "Installation complete" --msgbox "Pi PoE installation complete.\n\nRemember that the shutdown -h or poweroff commands will now remove power on the Pi.\n\nYou can now reboot the system to enable the service" 12 78
 fi
-
