@@ -5,9 +5,8 @@ Before=poweroff.target
 [Service]
 Type=idle
 ExecStart=/bin/true
-ExecStop=/opt/pipoe/removepower.sh
+ExecStop=/opt/pipoe/removepower.py
 RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
-

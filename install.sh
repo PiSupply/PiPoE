@@ -9,15 +9,9 @@ fi
 if [ ! $? = 0 ]; then
    exit 1
 else
-   sudo apt-get install -y git whiptail wiringpi #Installs packages which might be missing
+   sudo apt-get install -y git whiptail #Installs packages which might be missing
 
-   if grep "4" /proc/device-tree/model; then
-   cd /tmp
-   wget https://project-downloads.drogon.net/wiringpi-latest.deb
-   sudo dpkg -i wiringpi-latest.deb
-   sudo rm wiringpi-latest.deb
-   cd ~
-fi
+
 
 
    PiPoEDir="PiPoE"
@@ -28,7 +22,7 @@ fi
 
    git clone https://github.com/PiSupply/PiPoE.git
    mkdir /opt/pipoe
-   cp $PiPoEDir/removepower.sh /opt/pipoe
+   cp $PiPoEDir/removepower.py /opt/pipoe
    cp $PiPoEDir/pipoe.service /etc/systemd/system
 
    systemctl enable /etc/systemd/system/pipoe.service
